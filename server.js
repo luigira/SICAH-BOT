@@ -55,10 +55,9 @@ client.on('message', async (message) => {
   } else if (txt === '3' || txt === 'avisos') { // Cambio en la comparación de 'avisos'
     message.reply('No hay avisos por el momento');
     message.reply('¿Te gustaría realizar otra consulta? Puedes escribir "Hola" para volver a comenzar.');
-    // Agrega el flujo para la solicitud especial al final del bloque listenMessage
   } else if (txt === '0' || txt === 'adios' || txt === 'adiós' || txt === 'cerrar' || txt === 'cerrar sesion' || txt === 'cerrar sesión' || txt === 'salir' || txt === 'salir de la sesion' || txt === 'salir de la sesión' || txt === 'salir de sesion' || txt === 'salir de sesión' || txt === 'bye') {
     message.reply('Sesión finalizada, Hasta luego');
-    sendGoodbyeMessage(message.from); // Corrección aquí: usar 'message.from' en lugar de 'to'
+    sendGoodbyeMessage(message.from);  
   } else {
     message.reply('Lamento informarte que no puedo ayudar con esa solicitud específica. Por favor selecciona alguna de las opciones disponibles o bien contacta a nuestro equipo de Capital Humano para obtener más ayuda.');
     message.reply('¿Te gustaría realizar otra consulta? Puedes escribir "Hola" para volver a comenzar.');
